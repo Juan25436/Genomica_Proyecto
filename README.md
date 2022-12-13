@@ -32,6 +32,6 @@ Para probar las distintas formas de calcular la distancia o el indice de similit
 
 La imagen siguiente indica donde se tienen que descomentar para utilizar las diferentes formas:
 
-![indice](https://file%2B.vscode-resource.vscode-cdn.net/run/media/drxl45/libre/CLases/Genomica/Corona_seq/Genomica_Proyecto/images/indice.png?version%3D1670947432653)
+![indice](/images/indice.png)
 
 ## Alineamiento.
