@@ -7,7 +7,15 @@ Aquí se encuentran nuestas secuencias analizadas para obtener la información q
 
 ## Conteo de GC.
 
+Para esta parte de los resultados utilizamos el scrypt "conteo-gc.py".
 
+Para correrlo, ya que estamos en una terminal en el directorio donde se encuentra el scrypt, se escribe lo siguiente en la terminal:
+
+`python3 conteo-gc.py ./secuencias/<secuencia>.fna`
+
+Y el programa automaticamente realizará el conteo de Citocina y Guanina en la cadena.
+
+Imprimiendo en pantalla el conteo de Guanina,Citocina y el porcentaje GC dentro del genoma analizado.
 
 ## Distancia.
 
