@@ -7,9 +7,9 @@ Verificamos que se provean los archivos FASTA como argumento a la hora de correr
 En caso de que no estén se lanzará un error y se mostrará mensaje 'Falta el archivo FASTA de entrada.'
 """
 if len(sys.argv) != 3:
-    raise ValueError('Falta el archivo FASTA de entrada.')
+    raise ValueError('Falta uno o ambos archivos FASTA de entrada.')
 
-#Ya que sabemos el argumento fue dado, procedeoms a abrirlo y extraer la información.
+#Ya que sabemos el argumento fue dado, procedemos a abrirlo y extraer la información.
 with open(sys.argv[1],'r') as f:
     data = f.read()
 
@@ -94,25 +94,39 @@ def distancia(s1,s2):
     La distancia de un string a otro.
     """
 
+    print(len(s1))
+    print(len(s2))
+
     indice = 0
+    matchs = 0
     if len(s1)<len(s2):
         indice = len(s2)-len(s1)
+        print("Las cadenas no son de la misma longitud así que el indice empieza en:",end="")
+        print(indice)
         for i in range(len(s1)):
             if s1[i] != s2[i]:
                 indice += 1
+            if s1[i] == s2[i]:
+                matchs += 1
     
     if len(s2)<len(s1):
         indice = len(s1)-len(s2)
+        print("Las cadenas no son de la misma longitud así que el indice empieza en:",end="")
+        print(indice)
         for i in range(len(s2)):
             if s1[i] != s2[i]:
                 indice += 1
+            if s1[i] == s2[i]:
+                matchs += 1
     
     if len(s2)==len(s1):
         for i in range(len(s1)):
             if s1[i] != s2[i]:
                 indice += 1
+            if s1[i] == s2[i]:
+                matchs += 1
 
-    return indice 
+    return indice,matchs
 
 
 if __name__=="__main__":
@@ -127,6 +141,9 @@ if __name__=="__main__":
     print(d)
     """
     #Probamos con nuestra propuesta de distancia.
-    d = distancia(data,data2)
+    d,e= distancia(data,data2)
+    print("Obtenemos esta distancia:",end="")
     print(d)
+    print("Con el siguiente número de matchs:",end="")
+    print(e)
 
