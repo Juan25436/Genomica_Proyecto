@@ -43,3 +43,17 @@ La imagen siguiente indica donde se tienen que descomentar para utilizar las dif
 ![indice](/images/indice.png)
 
 ## Alineamiento.
+
+Para esta seccion usamos el script "Needleman-Wuntch.py" para ejecutarlo utilizamos el comando en terminal
+
+`$ python3 Needleman-Wuntch.py`
+ 
+La terminal solicitara dos entradas que corresponden a los nombres de los dos archivos que contengan los genomas, estos deben encontrarse en el mismo directorio que el script y de manera similar a los scripts pasados, se elimina la primera linea de los archivos FASTA que utilicemos
+
+La ejecucion puede tomar tiempo, pero una vez concluye devuelve el puntaje que se encuentre en la casilla inferior derecha de la matriz generada por dicho algoritmo
+
+Para cambiar la cantidad de nucleotidos con los que trabajara el programa, basta cambiar en la linea
+
+`for i in range(200):`
+
+el valor 200 por el valor deseado (el valor no esta dado en nucleotidos, esta en lineas de los archivos FASTA que contien cadenas de tamaño 80 )
