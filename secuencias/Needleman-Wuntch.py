@@ -73,6 +73,9 @@ def alinear(matriz, c1, c2):
     return resultado
 
 def leer_archivo(nombre):
+
+    """Funcion que obtiene información de un archivo proporcionado en terminal.
+    """   
     archivo = open(nombre,"r")
     lista = archivo.readlines()
     archivo.close()
